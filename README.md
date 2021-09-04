@@ -35,7 +35,7 @@ Open iSH and paste this code: `apk update && apk add bash && apk add curl && cur
 
 If you have no idea about installing the bot, read here: [Thilina Weerasekara](https://github.com/Thilinaweerasekara2003/AvatarUserBot/)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Thilinaweerasekara2003/AvatarUserBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Thilinaweerasekara2003/AvatarUserBot/tree/master)
 ### The Hard Method
 ```python
 git clone https://github.com/Quiec/AsenaUserBot.git
