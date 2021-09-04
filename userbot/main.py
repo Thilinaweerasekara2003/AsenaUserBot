@@ -66,18 +66,18 @@ AFKSTR = [
     "Şu an burada değilim....\nama öyleysem ...\n\nbu harika olmaz mıydı?",
 ]
 
-UNAPPROVED_MSG = ("`Hey,` {mention}`! Bu bir bot. Endişelenme.\n\n`"
-                  "`Sahibim sana PM atma izni vermedi. `"
-                  "`Lütfen sahibimin aktif olmasını bekleyin, o genellikle PM'leri onaylar.\n\n`"
-                  "`Bildiğim kadarıyla o kafayı yemiş insanlara PM izni vermiyor.`")
+UNAPPROVED_MSG = ("Hey, `{mention}`! This is a bot. Don't worry.\n\n`"
+                  "`My owner didn't give you permission to PM me.. `"
+                  "`Please wait for my owner to be active, she usually approves PMs. \ N \ n`"
+                  "`As far as I know she doesn't give PM permission to crazy people.`")
 
 DB = connect("learning-data-root.check")
 CURSOR = DB.cursor()
 CURSOR.execute("""SELECT * FROM BRAIN1""")
 ALL_ROWS = CURSOR.fetchall()
-INVALID_PH = '\nHATA: Girilen telefon numarası geçersiz' \
-             '\n  Ipucu: Ülke kodunu kullanarak numaranı gir' \
-             '\n       Telefon numaranızı tekrar kontrol edin'
+INVALID_PH = '\nERROR: Entered phone number is invalid' \
+             '\n Hint: Enter your number using the country code' \
+             '\n Check your phone number again'
 
 for i in ALL_ROWS:
     BRAIN_CHECKER.append(i[0])
@@ -139,7 +139,7 @@ def extractCommands(file):
             for Komut in Komutlar:
                 # if re.search('\[(\w*)\]', Komut):
                     # Komut = re.sub('(?<=\[.)[A-Za-z0-9_]*\]', '', Komut).replace('[', '')
-                CmdHelp.add_command(Komut, None, 'Bu plugin dışarıdan yüklenmiştir. Herhangi bir açıklama tanımlanmamıştır.')
+                CmdHelp.add_command(Komut, None, 'This plugin is externally loaded. No description defined.')
             CmdHelp.add()
 
 try:
@@ -160,7 +160,7 @@ try:
 
     # PLUGIN MESAJLARI AYARLIYORUZ
     PLUGIN_MESAJLAR = {}
-    ORJ_PLUGIN_MESAJLAR = {"alive": "`Tanrı Türk'ü Korusun. 🐺 Asena çalışıyor.`", "afk": f"`{str(choice(AFKSTR))}`", "kickme": "`Güle Güle ben gidiyorum `🤠", "pm": UNAPPROVED_MSG, "dızcı": str(choice(DIZCILIK_STR)), "ban": "{mention}`, yasaklandı!`", "mute": "{mention}`, sessize alındı!`", "approve": "{mention}`, bana mesaj gönderebilirsin!`", "disapprove": "{mention}`, artık bana mesaj gönderemezsin!`", "block": "{mention}`, engellendin!`"}
+    ORJ_PLUGIN_MESAJLAR = {"alive": "`God Bless Turk. 🐺 Asena is working.`", "afk": f"`{str(choice(AFKSTR))}`", "kickme": "`Goodbye, I'm leaving `🤠", "pm": UNAPPROVED_MSG, "dızcı": str(choice(DIZCILIK_STR)), "ban": "{mention}`, yasaklandı!`", "mute": "{mention}`, sessize alındı!`", "approve": "{mention}`, bana mesaj gönderebilirsin!`", "disapprove": "{mention}`, artık bana mesaj gönderemezsin!`", "block": "{mention}`, engellendin!`"}
 
     PLUGIN_MESAJLAR_TURLER = ["alive", "afk", "kickme", "pm", "dızcı", "ban", "mute", "approve", "disapprove", "block"]
     for mesaj in PLUGIN_MESAJLAR_TURLER:
@@ -213,7 +213,8 @@ try:
                     continue
                 extractCommands('./userbot/modules/' + plugin.file.name)
     else:
-        bot.send_message("me", f"`Lütfen pluginlerin kalıcı olması için PLUGIN_CHANNEL_ID'i ayarlayın.`")
+        bot.send_message("me", 
+f"`Please set PLUGIN_CHANNEL_ID to make plugins permanent.`")
 except PhoneNumberInvalidError:
     print(INVALID_PH)
     exit(1)
@@ -236,8 +237,8 @@ async def FotoDegistir (foto):
 for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
-LOGS.info("Botunuz çalışıyor! Herhangi bir sohbete .alive yazarak Test edin."
-          " Yardıma ihtiyacınız varsa, Destek grubumuza gelin t.me/AsenaSupport")
+LOGS.info("Your bot is working! Test by typing .alive in any chat."
+          " If you need help, come to our Support group https://t.me/HiTechRockets")
 LOGS.info(f"Bot sürümünüz: Asena {ASENA_VERSION}")
 
 """
