@@ -5,11 +5,11 @@
 
 <div align="center">
   <img src="https://telegra.ph/file/c8fb85a31bd60499677b0.jpg" width="200" height="200">
-  <h1>Avatar UserBot</h1>
+  <h1>ᴀᴠᴀᴛᴀʀ UserBot</h1>
 </div>
 <p align="center">
 
-Avatar UserBot is a bot that makes it easy for you to use Telegram. It is completely open source and free.
+ᴀᴠᴀᴛᴀʀ UserBot is a bot that makes it easy for you to use Telegram. It is completely open source and free.
     <br>
         <a href="https://github.com/quiec/AsenaUserBot/blob/master/README.md#kurulum">Kurulum</a> |
         <a href="https://github.com/Quiec/AsenaUserBot/wiki/G%C3%BCncelleme">Güncelleme</a> |
@@ -33,7 +33,7 @@ Open iSH and paste this code: `apk update && apk add bash && apk add curl && cur
 
 ### Simple Method
 
-If you have no idea about installing the bot, read here: [Kurulum Rehberi](https://github.com/Quiec/AsenaUserBot/wiki/Kurulum/)
+If you have no idea about installing the bot, read here: [Thilina Weerasekara](https://github.com/Thilinaweerasekara2003/AvatarUserBot/)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Thilinaweerasekara2003/AvatarUserBo)
 ### The Hard Method
