@@ -164,70 +164,71 @@
       "required": false
     },
     "LASTFM_USERNAME": {
-      "description": "Last.FM Kullanıcı adı",
+      "description": "Last.FM Username",
       "required": false
     },
     "LASTFM_PASSWORD": {
-      "description": "Last.FM Şifre",
+      "description": "Last.FM Password
+",
       "required": false
     },
     "BIO_PREFIX": {
-      "description": "Last.FM Modülü Biyografi için önek.",
+      "description": "Prefix for Last.FM Module Biography.",
       "required": false
     },
     "DEFAULT_BIO": {
-      "description": "Varsayılan profil biyografisi.",
+      "description": "Default profile bio.",
       "value": "@AsenaUserBot",
       "required": false
     },
     "G_DRIVE_CLIENT_SECRET": {
-      "description": "Google Drive için client secret girin.",
+      "description": "Enter client secret for Google Drive.",
       "required": false
     },
     "G_DRIVE_AUTH_TOKEN_DATA": {
-      "description": "Google Drive kimlik doğrulama verilerini JSON yapısı olarak girin.",
+      "description": "Enter Google Drive authentication data as JSON structure.",
       "required": false
     },
     "LYDIA_API_KEY": {
-      "description": "Bu modülün çalışması için CoffeeHouse API'sine ihtiyacı var. 'https://coffeehouse.intellivoid.info/dashboard' Buradan alabilirsiniz.",
+      "description": "This module needs the CoffeeHouse API to work. 'https://coffeehouse.intellivoid.info/dashboard' You can get it here.",
       "required": false
     },
     "WEATHER_DEFCITY": {
-      "description": "UserBot'un hava durumu modülü için varsayılan şehri ayarlayın.",
+      "description": "Set default city for UserBot's weather module.",
       "required": false
     },
     "LOGSPAMMER": {
-      "description": "Hata günlüklerinin, geçerli sohbette dosyayı göndermesi yerine UserBot günlük grubunda saklanmasını istemeniz durumunda bu değeri True olarak ayarlayın. Geçerli bir BOTLOG_CHATID değerinin ayarlanmasını gerektirir.",
+      "description": "Set this value to True if you want error logs to be stored in the UserBot log group instead of sending the file in the current chat. Requires a valid BOTLOG_CHATID value to be set.",
       "value": "False"
     },
     "WARN_LIMIT": {
-      "description": "Kişiyi gmutelemek/gbanlamak için gerekli uyarı sayısı. Genellikle 3 kullanılır.",
+      "description": "Number of alerts required to gmute/gban the contact. Usually 3 is used.",
       "value": "3",
       "required": false
     },
     "WARN_MODE": {
-      "description": "3 uyarıdan sonra gerçekleşecek olay. Sadece gmute ya da gban yazabilirsiniz. Aksi takdirde bot çalışmayabilir.",
+      "description": "The event that will occur after 3 warnings. You can just type gmute or gban. Otherwise the bot may not work.",
       "value": "gmute",
       "required": false
     },
     "GALERI_SURE": {
-      "description": "Galeri plugini içindir. Profil fotoğrafları kaç saniye de bir değişsin?",
+      "description": "It is for gallery plugin. How many seconds should profile photos change?",
       "value": "60",
       "required": false
     },
     "PAKET_ISMI": {
-      "description": "Dızla komutu paket ismini belirleyin. Paket ismi şöyle olacaktır: @KullanıcıAdın verdiğin değer 1",
+      "description": "Specify the syntax command package name. The package name will be: The value you give @UserName is 1",
       "value": "@AsenaUserBot Paketi",
       "required": false
     },
     "OTOMATIK_KATILMA": {
-      "description": "Support grubuna ve Kanal'a otomatik katılmak istemiyorsanız False yazın.",
+      "description": "Type False if you don't want to automatically join the Support group and Channel..",
       "value": "True",
       "required": true
     },
     "LANGUAGE": {
-      "description": "Botun dili. EN/TR/AZ yazabilirsiniz.",
-      "value": "TR",
+      "description": "The language of the bot. You can write EN/TR/AZ.",
+      "value": "EN",
       "required": true
     }
   },
