@@ -16,15 +16,15 @@
   "stack": "container",
   "env": {
     "API_KEY": {
-      "description": "Bu değeri my.telegram.org adresinden alın.",
+      "description": "Get this value from my.telegram.org.",
       "required": true
     },
     "API_HASH": {
-      "description": "Bu değeri my.telegram.org adresinden alın.",
+      "description": "Get this value from my.telegram.org.",
       "required": true
     },
     "PLUGIN_CHANNEL_ID": {
-      "description": "İsteğe bağlıdır, almak için @AsenaKaliciPlugin",
+      "description": "Optional, get @AsenaKaliciPlugin",
       "required": false
     },
     "SPOTIFY_DC": {
