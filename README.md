@@ -11,6 +11,7 @@
 
 ᴀᴠᴀᴛᴀʀ UserBot is a bot that makes it easy for you to use Telegram. It is completely open source and free.
     <br>
+        <a href="https://t.me/HiTechRockets">Telegram Group</a> |
         <a href="https://t.me/AsenaUserBot">Telegram Channel</a>
     <br>
 </p>
