@@ -1,5 +1,5 @@
 
-[No more support.](https://t.me/fusufs/826)
+[No more support.](https://t.me/HiTechRockets)
 
 ----
 
@@ -66,7 +66,7 @@ Help.add_info('Made by @Fusuf.') # You can add information.
 Help.add() # And let's add.
 ```
 
-## Bilgilendirme
+## To inform
 If you have any requests & complaints & suggestions [HiTecRockets] (https://t.me/HiTechRockets) ou can reach
 
 ```
