@@ -4,7 +4,7 @@
 ----
 
 <div align="center">
-  <img src="https://telegra.ph/file/c8fb85a31bd60499677b0.jpg" width="200" height="200">
+  <img src="https://telegra.ph/file/2482d6bc7556b05ebb329.jpg" width="700" height="600" >
   <h1>ᴀᴠᴀᴛᴀʀ UserBot</h1>
 </div>
 <p align="center">
