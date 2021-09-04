@@ -68,7 +68,7 @@ Help.add() # And let's add.
 ___
 
 ## To inform
-If you have any requests & complaints & suggestions u can reach [HiTecRockets](https://t.me/HiTechRockets).
+If you have any requests & complaints & suggestions you can reach [HiTecRockets](https://t.me/HiTechRockets).
 
 ```
     
