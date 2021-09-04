@@ -1,5 +1,4 @@
-
-[No more support.](https://t.me/HiTechRockets)
+## USER FRIENDLY USERBOT FOR TG!
 
 ----
 
@@ -18,8 +17,8 @@
 
 ----
 ![Docker Pulls](https://img.shields.io/docker/pulls/fusuf/asenauserbot?style=flat-square) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/fusuf/asenauserbot?style=flat-square)
-## Setup
-### Very Simple Method
+## SET UP
+### VERY SIMPLE METHOD
 [Youtube Videosu](https://www.youtube.com/watch?v=mUUQ53TYqI0) ![YouTube Video Views](https://img.shields.io/youtube/views/mUUQ53TYqI0?style=flat-square)
 
 **Android:** 
@@ -30,12 +29,12 @@ Open iSH and paste this code: `apk update && apk add bash && apk add curl && cur
 
 **Windows 10:** [Python](https://www.microsoft.com/en-us/p/python-38/9mssztt1n39l#activetab=pivot:overviewtab) indirin ardından PowerShell bu kodu yapıştırın: `Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://kutt.it/aYTzCx')`
 
-### Simple Method
+### SIMPLE METHOD
 
-If you have no idea about installing the bot, read here: [Thilina Weerasekara](https://github.com/Thilinaweerasekara2003/AvatarUserBot/)
+If you have no idea about installing the bot , read here: [Thilina Weerasekara](https://github.com/Thilinaweerasekara2003/AvatarUserBot/)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Thilinaweerasekara2003/AvatarUserBot)
-### The Hard Method
+### THE HARD METHOD
 ```python
 git clone https://github.com/Quiec/AsenaUserBot.git
 cd AsenaUserBot
@@ -44,7 +43,7 @@ pip install -r requirements.txt
 python3 main.py
 ```
 
-## Example Plugin
+## EXAMPLE PLUGIN
 ```python
 from userbot.events import register
 from userbot.cmdhelp import CmdHelp # <-- Bunu ekleyin.
@@ -66,7 +65,7 @@ Help.add() # And let's add.
 ```
 ___
 
-## To inform
+## TO INFORM
 If you have any requests & complaints & suggestions you can reach [HiTecRockets](https://t.me/HiTechRockets).
 
 ```
@@ -76,8 +75,8 @@ If you have any requests & complaints & suggestions you can reach [HiTecRockets]
     By installing Asena, you are deemed to accept these responsibilities.
 ```
 
-## Credits
-Thanks for;
+## CREDITS
+Thanks for ;
 
 [Seden UserBot](https://github.com/TeamDerUntergang/Telegram-UserBot)
 
