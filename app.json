@@ -1,7 +1,7 @@
 {
-  "name": "Asena UserBot",
-  "description": "Asena UserBot",
-  "logo": "https://i.hizliresim.com/1UoYoT.jpg",
+  "name": "Avatar UserBot",
+  "description": "Avatar UserBot",
+  "logo": "https://telegra.ph/file/c8fb85a31bd60499677b0.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -12,7 +12,7 @@
   ],
   "repository": "https://github.com/Thilinaweerasekara2003/AvatarUserBot",
   "website":   "https://quiec.tech",
-  "success_url": "https://t.me/AsenaSupport",
+  "success_url": "https://t.me/HiTechRockets",
   "stack": "container",
   "env": {
     "API_KEY": {
