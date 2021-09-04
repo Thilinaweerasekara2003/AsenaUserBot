@@ -1,11 +1,11 @@
-
+{  
     "name": "Avatar UserBot",
     "description": "Avatar UserBot",
     "logo": "https://telegra.ph/file/c8fb85a31bd60499677b0.jpg",
     "keywords": [
       "telegram",
       "userbot",
-      "Avatar",
+         "Avatar",
       "plugin",
       "modular",
       "productivity"
@@ -243,3 +243,4 @@
       "url": "heroku-community/apt"
       }]
   }
+
