@@ -9,7 +9,7 @@ from userbot import PATTERNS, CMD_HELP, CMD_HELP_BOT
 
 class CmdHelp:
     """
-    Komut yardımlarını daha iyi üretmek için yazdığım sınıf.
+    The class I wrote to better produce command aids.
     """
 
     FILE = ""
@@ -67,7 +67,7 @@ class CmdHelp:
             
             if self.INFO == '':
                 if not self.WARNING == '':
-                    result += f"**⚠️ Uyarı:** {self.WARNING}\n\n"
+                    result += f"**⚠️ Warning:** {self.WARNING}\n\n"
             else:
                 if not self.WARNING == '':
                     result += f"**⚠️ Uyarı:** {self.WARNING}\n"
