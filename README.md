@@ -65,9 +65,10 @@ Help.add_info('Made by @Fusuf.') # You can add information.
 # Or warning --> Help.add_warning('DO NOT USE!')
 Help.add() # And let's add.
 ```
+___
 
 ## To inform
-If you have any requests & complaints & suggestions [HiTecRockets] (https://t.me/HiTechRockets) ou can reach
+If you have any requests & complaints & suggestions u can reach [HiTecRockets](https://t.me/HiTechRockets).
 
 ```
     
@@ -75,9 +76,8 @@ If you have any requests & complaints & suggestions [HiTecRockets] (https://t.me
     This is an open source project, you are responsible for every action you take. Absolutely Asena managers do not accept responsibility.
     By installing Asena, you are deemed to accept these responsibilities.
 ```
-```
 
-## Credit
+## Credits
 Thanks for;
 
 [Seden UserBot](https://github.com/TeamDerUntergang/Telegram-UserBot)
@@ -86,3 +86,4 @@ Thanks for;
 
 [Spechide](https://github.com/Spechide)
 
+___
