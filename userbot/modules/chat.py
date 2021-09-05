@@ -146,47 +146,4 @@ async def keep_read(message):
 regexNinja = False
 
 
-@register(outgoing=True, pattern="^s/")
-async def sedNinja(event):
-    """Regex-ninja modülü için, s/ ile başlayan otomatik silme komutu"""
-    if regexNinja:
-        await sleep(.5)
-        await event.delete()
-
-
-@register(outgoing=True, pattern="^.regexninja (on|off)$")
-async def sedNinjaToggle(event):
-    """ Regex ninja modülünü etkinleştirir veya devre dışı bırakır. """
-    global regexNinja
-    if event.pattern_match.group(1) == "on":
-        regexNinja = True
-        await event.edit("`Regexbot için ninja modu etkinleştirdi.`")
-        await sleep(1)
-        await event.delete()
-    elif event.pattern_match.group(1) == "off":
-        regexNinja = False
-        await event.edit("`Regexbot için ninja modu devre dışı bırakıldı.`")
-        await sleep(1)
-        await event.delete()
-
-
-CMD_HELP.update({
-    "chat":
-    ".chatid\
-\nKullanım: Belirlenen grubun ID numarasını verir\
-\n\n.userid\
-\nKullanım: Belirlenen kullanıcının ID numarasını verir.\
-\n\n.log\
-\nKullanım: Yanıtlanan mesajı günlük grubuna gönderir.\
-\n\n.kickme\
-\nKullanım: Belirlenen gruptan ayrılmanızı sağlar.\
-\n\n.unmutechat\
-\nKullanım: Susturulmuş bir sohbetin sesini açar.\
-\n\n.mutechat\
-\nKullanım: Belirlenen grubu susturur.\
-\n\n.link <kullanıcı adı/kullanıcı id> : <isteğe bağlı metin> (veya) herhangi birinin mesajına .link ile yanıt vererek <isteğe bağlı metin>\
-\nKullanım: İsteğe bağlı özel metin ile kullanıcının profiline kalıcı bir bağlantı oluşturun.\
-\n\n.regexninja on/off\
-\nKullanım: Küresel olarak regex ninja modülünü etkinleştirir / devre dışı bırakır.\
-\nRegex ninja modülü regex bot tarfından tetiklenen mesajları silmek için yardımcı olur."
-})
+@register(out
