@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# Asena UserBot - Yusuf Usta
+# Avater UserBot - Thilina Weerasekara
 
 from userbot import CMD_HELP
 from userbot.events import register
@@ -70,5 +70,5 @@ async def liste(event):
             await event.edit(LANG['GMUTE_LIST'] % mesaj)
 
 CmdHelp('liste').add_command(
-    'liste', '<gmute/gban>', 'Gbanladığınız ya da Gmutelediğiniz kişileri getirir.'
+    'liste', '<gmute/gban>', 'Brings the contacts you have Gbaned or Gmuted.'
 ).add()
