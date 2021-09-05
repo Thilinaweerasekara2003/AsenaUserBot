@@ -7,7 +7,7 @@
 # Asena UserBot - Yusuf Usta
 
 
-""" Internet ile alakalı bilgileri edinmek için kullanılan UserBot modülüdür. """
+""" It is the UserBot module used to obtain information related to the Internet. """
 
 from datetime import datetime
 
@@ -26,7 +26,7 @@ LANG = get_value("www")
 
 @register(outgoing=True, pattern="^.speed$")
 async def speedtst(spd):
-    """ .speed komutu sunucu hızını tespit etmek için SpeedTest kullanır. """
+    """The .speed command uses SpeedTest to detect server speed. """
     await spd.edit(LANG['SPEED'])
     test = Speedtest()
 
@@ -51,7 +51,8 @@ async def speedtst(spd):
 
 def speed_convert(size):
     """
-    Merhaba Asena, baytları okuyamıyor musun?
+   
+    Hi Avatar, can't you read the bytes?
     """
     power = 2**10
     zero = 0
@@ -64,7 +65,7 @@ def speed_convert(size):
 
 @register(outgoing=True, pattern="^.dc$")
 async def neardc(event):
-    """ .dc komutu en yakın datacenter bilgisini verir. """
+    """ The .dc command gives the closest datacenter information."""
     result = await event.client(functions.help.GetNearestDcRequest())
     await event.edit(f"Şehir : `{result.country}`\n"
                      f"En yakın datacenter : `{result.nearest_dc}`\n"
@@ -73,7 +74,7 @@ async def neardc(event):
 
 @register(outgoing=True, pattern="^.ping$")
 async def pingme(pong):
-    """ .ping komutu userbotun ping değerini herhangi bir sohbette gösterebilir.  """
+    """The .ping command can show the userbot's ping in any chat.  """
     start = datetime.now()
     await pong.edit("`Pong!`")
     end = datetime.now()
@@ -81,9 +82,9 @@ async def pingme(pong):
     await pong.edit("`Pong!\n%sms`" % (duration))
 
 CmdHelp('www').add_command(
-    'speed', None, 'Bir speedtest uygular ve sonucu gösterir.'
+    'speed', None, 'Performs a speedtest and displays the result.'
 ).add_command(
-    'dc', None, 'Sunucunuza en yakın datacenter\'ı gösterir.'
+    'dc', None, 'Shows the closest datacenter to your server.'
 ).add_command(
-    'ping', None, 'Botun ping değerini gösterir.'
+    'ping', None, 'Shows the bot's ping .'
 ).add()
