@@ -4,10 +4,10 @@
 # you may not use this file except in compliance with the License.
 #
 
-# Asena UserBot - Yusuf Usta
+# Avater UserBot - Thilina Weerasekara
 
 
-""" Filtre komutlarını içeren UserBot modülüdür. """
+""" UserBot module that contains filter commands. """
 
 from asyncio import sleep
 import re
@@ -66,7 +66,7 @@ def split_quotes(text: str):
 
 @register(incoming=True, disable_edited=True, disable_errors=True)
 async def filter_incoming_handler(handler):
-    """ Gelen mesajın filtre tetikleyicisi içerip içermediğini kontrol eder """
+    """ Checks if the incoming message contains a filter trigger """
     try:
         if not (await handler.get_sender()).bot:
             try:
@@ -100,7 +100,7 @@ async def genelfilter(event):
     try:
         from userbot.modules.sql_helper.filter_sql import add_filter
     except AttributeError:
-        await event.edit("`Bot Non-SQL modunda çalışıyor!!`")
+        await event.edit("`Bot running in Non-SQL mode!!`")
         return
     mesj = split_quotes(event.pattern_match.group(1))
 
@@ -122,7 +122,7 @@ async def genelfilter(event):
                 BOTLOG_CHATID, f"#GENELFILTER\
             \nGrup ID: {event.chat_id}\
             \nFiltre: {keyword}\
-            \n\nBu mesaj filtrenin cevaplanması için kaydedildi, lütfen bu mesajı silmeyin!"
+            \ N \ pain mesaj66 / 5000 Translation resultssaved for filter reply, please do not delete this message !"
             )
             msg_o = await event.client.forward_messages(
                 entity=BOTLOG_CHATID,
@@ -147,4 +147,4 @@ async def genelfilter(event):
 
 @register(outgoing=True, pattern="^.filter (.*)")
 async def add_new_filter(new_handler):
-    """ .filter komutu bir sohb
+    """ .filter command is a chat 
