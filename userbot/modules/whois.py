@@ -4,10 +4,11 @@
 # you may not use this file except in compliance with the License.
 #
 
-# Asena UserBot - Yusuf Usta
+# Avatar UserBot - Yusuf Usta
 
 
-""" Telegram'daki herhangi bir kullanıcı hakkında bilgi almak için UserBot modülü (sizde dahil!). """
+""" 
+UserBot module to get information about any user in Telegram (including you!). """
 
 import os
 
@@ -64,7 +65,7 @@ async def who(event):
 
 
 async def get_user(event):
-    """ Kullanıcıyı argümandan veya yanıtlanan mesajdan alın. """
+    """ Get user from argument or reply message. """
     if event.reply_to_msg_id and not event.pattern_match.group(1):
         previous_message = await event.get_reply_message()
         replied_user = await event.client(
@@ -99,7 +100,7 @@ async def get_user(event):
 
 
 async def fetch_info(replied_user, event):
-    """ Kullanıcı nesnesinden ayrıntıları alın. """
+    """ Get details from user object. """
     replied_user_profile_photos = await event.client(
         GetUserPhotosRequest(user_id=replied_user.user.id,
                              offset=42,
@@ -154,5 +155,5 @@ async def fetch_info(replied_user, event):
     return photo, caption
 
 CmdHelp('whois').add_command(
-    'whois', ' <kullanıcı adı/yanıt/id>', 'Kullanıcının bilgilerini alır.'
+    'whois', '<username/reply/id>', 'Retrieves the user's information.'
 ).add()
