@@ -4,11 +4,11 @@
 # you may not use this file except in compliance with the License.
 #
 
-# Asena UserBot - Yusuf Usta
+# Avater UserBot - Thilina Weerasekara
 
 
 """
-Bu modül commit sayısına bağlı olarak botu günceller.
+This module updates the bot depending on the commit count..
 """
 
 from os import remove, execle, path, environ
@@ -56,14 +56,14 @@ async def update_requirements():
 
 @register(outgoing=True, pattern=r"^\.update(?: |$)(.*)")
 async def upstream(ups):
-    ".update komutu ile botunun güncel olup olmadığını denetleyebilirsin."
+    "You can check if your bot is up to date with the .update command.."
     await ups.edit(LANG['DETECTING'])
     conf = ups.pattern_match.group(1)
     off_repo = UPSTREAM_REPO_URL
     force_update = False
 
     try:
-        txt = "`Güncelleme başarısız oldu! Bazı sorunlarla karşılaştık.`\n\n**LOG:**\n"
+        txt = "`Update failed! We ran into some issues. `\n\n**LOG:**\n"
         repo = Repo()
     except NoSuchPathError as error:
         await ups.edit(f'{txt}\n`{error} {LANG["NOT_FOUND"]}.`')
@@ -130,7 +130,7 @@ async def upstream(ups):
         await ups.edit(LANG['FORCE_UPDATE'])
     else:
         await ups.edit(LANG['UPDATING'])
-    # Bot bir Heroku dynosunda çalışıyor, bu da bazı sıkıntıları beraberinde getiriyor.
+    # The bot runs on a Heroku dyno, which brings some annoyances.
     if HEROKU_APIKEY is not None:
         import heroku3
         heroku = heroku3.from_key(HEROKU_APIKEY)
@@ -181,7 +181,7 @@ async def upstream(ups):
         return
 
 CmdHelp('update').add_command(
-    'update', None, 'Botunuza siz kurduktan sonra herhangi bir güncelleme gelip gelmediğini kontrol eder.'
+    'update', None, 'After you install it on your bot, it checks for any updates..'
 ).add_command(
-    'update now', None, 'Botunuzu günceller.'
+    'update now', None, 'Updates your bot.'
 ).add()
