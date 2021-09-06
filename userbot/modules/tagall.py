@@ -4,9 +4,9 @@
 # you may not use this file except in compliance with the License.
 #
 
-# Asena UserBot - Yusuf Usta
+# Avater UserBot - Thilina Weerasekara
 
-# @NaytSeyd tarafından portlanmıştır.
+# @NayPorted by tSeyd.
 #
 
 from telethon.tl.types import ChannelParticipantsAdmins
@@ -45,7 +45,7 @@ async def _(event):
     await event.delete()
 
 CmdHelp('tagall').add_command(
-    'tagall', None, 'Bu komutu kullandığınızda sohbet içerisinde ki herkesi etiketler.'
+    'tagall', None, 'Tag everyone in the chat when you use this command.'
 ).add_command(
-    'admin', None, 'Bu komutu kullandığınızda sohbet içerisinde ki yöneticileri etiketler.'
+    'admin', None, 'When you use this command, tags the admins in the chat..'
 ).add()
