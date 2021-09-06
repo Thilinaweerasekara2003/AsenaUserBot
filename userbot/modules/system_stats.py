@@ -4,10 +4,10 @@
 # you may not use this file except in compliance with the License.
 #
 
-# Asena UserBot - Yusuf Usta
+# Avater UserBot - Thilina Weerasekara
 
 
-""" Sunucu hakkında bilgi veren UserBot modülüdür. """
+""" It is the UserBot module that gives information about the server. """
 
 from asyncio import create_subprocess_shell as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
@@ -33,7 +33,7 @@ LANG = get_value("system_stats")
 
 @register(outgoing=True, pattern="^.sysd$")
 async def sysdetails(sysd):
-    """ .sysd komutu neofetch kullanarak sistem bilgisini gösterir. """
+    """ The .sysd command displays system information using neofetch. """
     try:
         neo = "neofetch --stdout"
         fetch = await asyncrunapp(
@@ -89,7 +89,7 @@ async def bot_ver(event):
 
 @register(outgoing=True, pattern="^.pip(?: |$)(.*)")
 async def pipcheck(pip):
-    """ .pip komutu python-pip araması yapar. """
+    """ The .pip command searches for python-pip."""
     pipmodule = pip.pattern_match.group(1)
     if pipmodule:
         await pip.edit(f"`{LANG['SEARCHING']} . . .`")
@@ -150,7 +150,7 @@ async def amialive(e):
             PLUGIN_MESAJLAR['alive'].text = PLUGIN_MESAJLAR['alive'].text.format(
                 telethon=version.__version__,
                 python=python_version(),
-                asena=ASENA_VERSION,
+                avater=AVATER_VERSION,
                 plugin=len(CMD_HELP),
                 id=me.id,
                 username='@' + me.username if me.username else f'[{me.first_name}](tg://user?id={me.id})',
