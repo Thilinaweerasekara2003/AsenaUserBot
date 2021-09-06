@@ -4,10 +4,10 @@
 # you may not use this file except in compliance with the License.
 #
 
-# Asena UserBot - Yusuf Usta
+# Avater UserBot - ThilinaWeerasekara
 
 
-""" Sunucuya dosya indirme/yükleme yapmayı sağlayan UserBot modülüdür. """
+""" It is the UserBot module that allows downloading/uploading files to the server.. """
 
 import json
 import os
@@ -45,7 +45,7 @@ def get_lst_of_files(input_directory, output_lst):
 
 
 async def progress(current, total, event, start, type_of_ps, file_name=None):
-    """Upload-download için genel process_callback dir."""
+    """The general process_callback for upload-download is."""
     now = time.time()
     diff = now - start
     if round(diff % 10.00) == 0 or current == total:
@@ -72,7 +72,7 @@ async def progress(current, total, event, start, type_of_ps, file_name=None):
 
 
 def humanbytes(size):
-    """ Boyut okunabilir olması için bayt olarak gösterilir """
+    """ Size is shown in bytes for readability """
     # https://stackoverflow.com/a/49361727/4723940
     if not size:
         return ""
@@ -87,22 +87,22 @@ def humanbytes(size):
 
 
 def time_formatter(milliseconds: int) -> str:
-    """ Daha güzel görünmesi için zamanı milisaniye olarak belirtir. """
+    """ Specifies the time in milliseconds to make it look nicer. """
     seconds, milliseconds = divmod(int(milliseconds), 1000)
     minutes, seconds = divmod(seconds, 60)
     hours, minutes = divmod(minutes, 60)
     days, hours = divmod(hours, 24)
     tmp = ((str(days) + f" {LANG['DAY']}, ") if days else "") + \
         ((str(hours) + " saat, ") if hours else "") + \
-        ((str(minutes) + " dakika, ") if minutes else "") + \
-        ((str(seconds) + " saniye, ") if seconds else "") + \
-        ((str(milliseconds) + " milisaniye, ") if milliseconds else "")
+        ((str(minutes) + "minute, ") if minutes else "") + \
+        ((str(seconds) + " second, ") if seconds else "") + \
+        ((str(milliseconds) + " millisecond, ") if milliseconds else "")
     return tmp[:-2]
 
 
 @register(pattern=r".download(?: |$)(.*)", outgoing=True)
 async def download(target_file):
-    """ .download komutu userbot sunucusuna dosya indirmenizi sağlar. """
+    """The .download command allows you to download files to the userbot server. """
     await target_file.edit(LANG['DOWNLOADING'])
     input_str = target_file.pattern_match.group(1)
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
@@ -175,7 +175,8 @@ async def download(target_file):
 
 @register(pattern=r".uploadir (.*)", outgoing=True)
 async def uploadir(udir_event):
-    """ .uploadir komutu bir klasördeki tüm dosyaları uploadlamanıza yarar """
+    """ 
+The .uploadir command allows you to upload all files in a folder."""
     input_str = udir_event.pattern_match.group(1)
     if os.path.exists(input_str):
         await udir_event.edit(LANG['TRYING'])
@@ -251,7 +252,7 @@ async def uploadir(udir_event):
 
 @register(pattern=r".upload (.*)", outgoing=True)
 async def upload(u_event):
-    """ .upload komutu userbot sunucusundan dosya uploadlamaya yarar. """
+    """ The .upload command is used to upload files from the userbot server.. """
     await u_event.edit(LANG['TRYING'])
     input_str = u_event.pattern_match.group(1)
     if input_str in ("userbot.session", "config.env"):
@@ -489,7 +490,7 @@ def extract_w_h(file):
 
 @register(pattern=r".uploadas(stream|vn|all) (.*)", outgoing=True)
 async def uploadas(uas_event):
-    """ .uploadas komutu size upload yaparken bazı argümanlar belirtmenizi sağlar. """
+    """ The .uploadas command allows you to specify some arguments when uploading. """
     await uas_event.edit("Lütfen bekleyin...")
     type_of_upload = uas_event.pattern_match.group(1)
     supports_streaming = False
@@ -570,17 +571,17 @@ async def uploadas(uas_event):
                         progress(d, t, uas_event, c_time, "Uploadlanıyor...",
                                  file_name)))
             elif spam_big_messages:
-                await uas_event.edit("TBD: Halihazırda uygulanamadı.")
+                await uas_event.edit("TBD: Currently not implemented.")
                 return
             os.remove(thumb)
             await uas_event.edit("Upload başarılı !!")
         except FileNotFoundError as err:
             await uas_event.edit(str(err))
     else:
-        await uas_event.edit("404: Dosya bulunamadı.")
+        await uas_event.edit("404: File not found.")
 
 CmdHelp('updown').add_command(
-    'download', '<bağlantı-dosya adı> (ya da bir şeye cevap vererek)', 'Sunucuya dosyayı indirir.'
+    'download', '<link-filename> (or reply to something)', 'Downloads file to server.'
 ).add_command(
     'upload', '<sunucudaki dosya yolu>', 'Sunucunuzdaki bir dosyayı sohbete upload eder.'
 ).add_command(
