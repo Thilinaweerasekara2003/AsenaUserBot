@@ -4,10 +4,10 @@
 # you may not use this file except in compliance with the License.
 #
 
-# Asena UserBot - Yusuf Usta
+# Avater UserBot - Thilina Weerasekara
 
 
-""" Bir konumun ya da UserBot sunucusunun tarih/saatini gösterebilecek modüldür. """
+""" It is a module that can display the date/time of a location or UserBot server.. """
 
 from datetime import datetime as dt
 
@@ -27,7 +27,8 @@ LANG = get_value("time")
 # ████████████████████████████████ #
 
 async def get_tz(con):
-    """ Seçilen bölgenin saat dilimini elde etmek içindir. """
+    """ 
+To get the time zone of the selected region. """
     if "(Uk)" in con:
         con = con.replace("Uk", "UK")
     if "(Us)" in con:
@@ -53,9 +54,9 @@ async def get_tz(con):
 
 @register(outgoing=True, pattern="^.time(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
 async def time_func(tdata):
-    """ .time komutu şu şekilde kullanılabilir
-        1- Bölge belirtilerek.
-        2. Varsayılan userbot bölgesi (.settime komutuyla ayarlanabilir)
+    """ .The time command can be used like this
+        1-By specifying the region.
+        2. Default userbot zone (can be set with .settime command)
         3. UserBot'un barındığı sunucunun tarihi.
     """
     con = tdata.pattern_match.group(1).title()
@@ -115,10 +116,10 @@ async def time_func(tdata):
 
 @register(outgoing=True, pattern="^.date(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
 async def date_func(dat):
-    """ .date komutu şu şekilde kullanılabilir
-        1- Bölge belirtilerek.
-        2. Varsayılan userbot bölgesi (.settime komutuyla ayarlanabilir)
-        3. UserBot'un barındığı sunucunun tarihi.
+    """ The .date command can be used as
+      1- By specifying the region.
+      2. Default userbot zone (can be set with .settime command)
+        3. The date of the server where UserBot is hosted.
     """
     con = dat.pattern_match.group(1).title()
     tz_num = dat.pattern_match.group(2)
@@ -175,7 +176,7 @@ async def date_func(dat):
         return
 
 CmdHelp('time').add_command(
-    'time', '<ülke ismi/kodu> <saat dilimi numarası>', 'Bir ülkenin saatini gösterir. Eğer bir ülke birden fazla saat dilimine sahipse, tümü birden gösterilir ve seçim sana bırakılır.'
+   'time', '<country name/code> <time zone number>', 'Indicates the time of a country. If a country has more than one time zone, all will be shown and the choice is yours.'
 ).add_command(
-    'date', '<ülke ismi/kodu> <saat dilimi numarası>', 'Bir ülkenin tarihini gösterir. Eğer bir ülke birden fazla saat dilimine sahipse, tümü birden gösterilir. ve seçim sana bırakılır.'
+   'date', '<country name/code> <time zone number>', 'Shows the date of a country. If a country has more than one time zone, all are shown. and the choice is left to you. '
 ).add()
